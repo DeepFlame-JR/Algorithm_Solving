@@ -17,4 +17,20 @@ object leet318 extends App{
           bitset |= 1 << (char.toInt-97)
         }
 
-        fo
+        for(j <- 0 until i) {
+          // 같은 자리에 1이 하나라도 있다면 1보다 큼
+          if ((bitset_list(j) & bitset) == 0) {
+            ans = math.max(ans, word_length * words(j).length)
+          }
+        }
+        bitset_list = bitset_list.updated(i, bitset)
+      }
+
+      ans
+    }
+  }
+
+  println(Solution.maxProduct(Array("abcw","baz","foo","bar","xtfn","abcdef")))
+  println(Solution.maxProduct(Array("a","ab","abc","d","cd","bcd","abcd")))
+  println(Solution.maxProduct(Array("a","aa","aaa","aaaa")))
+}
