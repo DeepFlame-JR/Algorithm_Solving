@@ -20,6 +20,7 @@ object leet135 extends App {
       }
 
       // 주변(neighbors)보다 사탕을 많이 받아야한다
+      // 그 상황에서 좌우를 보는 것이 아니라 양쪽에서 사탕 stack이 얼마나 쌓였는지를 체크하는 것이 중요
       // left > right
       calculate(ratings)
 
