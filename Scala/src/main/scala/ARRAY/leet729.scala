@@ -1,6 +1,7 @@
 package ARRAY
 
 // https://leetcode.com/problems/my-calendar-i/
+// medium
 
 object leet729 extends App {
 
