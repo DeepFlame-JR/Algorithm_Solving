@@ -1,6 +1,6 @@
+package ARRAY
 
 // https://leetcode.com/problems/two-sum/
-
 object leet1 extends App {
   object Solution {
     def twoSum(nums: Array[Int], target: Int): Array[Int] = {

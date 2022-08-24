@@ -1,4 +1,8 @@
-object leet58 extends App{
+package STRING
+
+// https://leetcode.com/problems/length-of-last-word/
+
+object leet58 extends App {
   object Solution {
     def lengthOfLastWord(s: String): Int = {
       s.trim().split(" ").last.length
