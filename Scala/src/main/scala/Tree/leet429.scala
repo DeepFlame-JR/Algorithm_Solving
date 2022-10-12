@@ -19,4 +19,16 @@ object leet429 extends App{
 
         if(ans.length < level+1)
           ans :+= List.empty[Int]
- 
+        ans(level) :+= cur.value
+
+        for(child <- cur.children)
+          helper(child, level+1)
+      }
+
+      helper(root, 0)
+      ans.toList
+    }
+  }
+
+  Solution.levelOrder(new Node(1))
+}

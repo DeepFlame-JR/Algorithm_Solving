@@ -18,4 +18,23 @@ object leet557 extends App{
           }
           ansList :+= temp
         }
-        e
+        else{
+          stack.push(char)
+        }
+      }
+
+
+      if(stack.nonEmpty){
+        var temp = ""
+        while (stack.nonEmpty) {
+          temp += stack.pop()
+        }
+        ansList :+= temp
+      }
+
+      ansList.mkString(" ")
+    }
+  }
+
+  println(Solution.reverseWords("Let's take LeetCode contest"))
+}
