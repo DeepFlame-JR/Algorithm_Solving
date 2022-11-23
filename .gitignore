@@ -4,7 +4,8 @@
 # 현재 디렉토리의 .gitignore 파일 활용
 !/.gitignore
 
-# 모든 폴더의 py, scala 확장자만 활용
+# 모든 폴더의 py, scala, cpp 확장자만 활용
 !*/
 !*.py
 !*.scala
+!*.cpp
