@@ -7,7 +7,6 @@ int a2[max_n][max_n];
 
 int main(){
     // fill(first, last, value): 배열 초기화
-
     fill(a, a+max_n, 10);
     fill(&a2[0][0], &a2[0][0] + max_n*max_n, 10);
     
@@ -45,6 +44,8 @@ int main(){
     // lower_bound(): 어떤 값 이상이 되는 위치 (이분탐색, O(nlogn))
     // upper_bound(): 어떤 값이 시작되기 전의 위치 (얘는 뒤에서 부터 찾음)
     vector<int> d{1,2,2,2,3,5};
+    for(int i:d) cout << i << ' ';
+    cout << '\n';
 
     printf("%d의 개수: %d, 시작점|값: %d|%d 끝점|값: %d|%d\n",
         2,
