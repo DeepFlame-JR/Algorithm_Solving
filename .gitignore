@@ -9,3 +9,4 @@
 !*.py
 !*.scala
 !*.cpp
+!*.md
