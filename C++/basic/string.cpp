@@ -39,6 +39,8 @@ int main(){
     cout << it << '\n';
     cout << string::npos << '\n';
 
+    reverse(a.begin(), a.end());
+
     // 특정 위치에서 크기만큼 문자열 추출
     cout << a.substr(5, 2) << '\n';
     return 0;
