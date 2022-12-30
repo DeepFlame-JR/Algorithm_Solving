@@ -38,6 +38,10 @@ void RotateLeft90(vector<vector<int>> &v2){
     }
 }
 
+void ToString(){
+    cout << std::to_string(1) << '\n';
+}
+
 int main(){
     Rotate();
     vector<vector<int>> v2 {{1,2,3},{4,5,6},{7,8,9}};
