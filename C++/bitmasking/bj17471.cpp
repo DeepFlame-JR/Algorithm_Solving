@@ -18,7 +18,7 @@ int main(){
     }
 
     for(int i = 0 ; i < (1<<N) ; i++){
-        bool Visit[10] = {false, false, false, false, false, false, false, false, false, false};
+        bool Visit[10];
         int area[N];
         int area_1 = -1;
         int area_2 = -1;
