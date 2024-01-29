@@ -14,7 +14,7 @@ int main(){
     for(int limit = 1 ; limit <= M ; limit ++){
         for(int i = 1 ; i <= N ; i ++){
             if(weight[i] <= limit) dp[i][limit] = value[i];
-            if(limit-weight[i] > 0) dp[i][limit] += dp[i][limit-weight[i]];
+            if(limit-weight[i] > 0) dp[i][limit] += dp[i-1][limit-weight[i]];
             dp[i][limit] = max(dp[i][limit], dp[i-1][limit]);
         }
     }
