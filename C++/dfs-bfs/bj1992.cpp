@@ -7,26 +7,24 @@ int dy[4] = {0,1,0,1};
 int N, Map[max_n][max_n];
 string ans;
 
-string go(int n, int x, int y){
-    n /= 2;
-    string t;
+void go(int x, int y, int n){
+    int cur = Map[x][y];
 
-    if(n==1){
-        for(int i = 0 ; i < 4; i ++){
-            t += std::to_string(Map[x+dx[i]][y+dy[i]]);
+    for(int i = x ; i < x+n ; i ++){
+        for(int j = y ; j < y+n ; j ++){
+            if(cur != Map[i][j]){
+                cout << '(';
+                go(x, y, n/2);
+                go(x, y+n/2, n/2);
+                go(x+n/2, y, n/2);
+                go(x+n/2, y+n/2, n/2);
+                cout << ')';
+                return;
+            }
         }
     }
-    else{
-        for(int i = 0 ; i < 4; i ++){
-            t += go(n, x+dx[i]*n, y+dy[i]*n);
-        }
-    }
 
-    if(t == "0000") t = "0";
-    else if(t == "1111") t = "1";
-    else t = '(' + t + ')';
-
-    return t;
+    cout << cur;
 }
 
 int main(){
@@ -37,7 +35,7 @@ int main(){
         }
     }
     
-    cout << go(N, 0, 0) << '\n';
+    go(0, 0, N);
 
     return 0;
 }
